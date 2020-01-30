@@ -11,9 +11,6 @@ describe('Employees', () => {
       expect(err.errors.lastName).to.exist;
       expect(err.errors.department).to.exist;
     });
-    after(() => {
-      mongoose.models = {};
-    });
   });
   it('should throw an error if "firstName", "lastName", "department" is not a string', () => {
     const cases = [{}, []];
@@ -64,5 +61,9 @@ describe('Employees', () => {
         expect(err.department).to.not.exist;
       });
     }
+  });
+  
+  after(() => {
+    mongoose.models = {};
   });
 });
