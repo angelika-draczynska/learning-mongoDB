@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "mocha --watch \"./{,!(node_modules)/**/}*.test.js\"",
-    "test:watch": "onchange \"./**/*.js\" -i -k -- yarn test"
+    "test": "mocha \"./{,!(node_modules)/**/}*.test.js\"",    
+    "test:watch": "onchange \"./**/*.js\" -i -k -- yarn test "
   },
   "dependencies": {
     "chai": "4.2.0",
